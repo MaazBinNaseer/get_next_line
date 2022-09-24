@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_utils.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mbin-nas <mbin-nas@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/23 16:43:08 by mbin-nas          #+#    #+#             */
-/*   Updated: 2022/09/23 18:23:39 by mbin-nas         ###   ########.fr       */
+/*   Updated: 2022/09/24 13:39:58 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,10 +39,10 @@ char *ft_strjoin(char *s1, char *s2)
         return (NULL);
     i = 0;
     j = 0;
-    while(s1 != NULL && s1 != '\0')
+    while(s1[j] != '\0')
         result[i++] = s1[j++];
     j = 0;
-    while(s2 != NULL && s2 != '\0')
+    while(s2[j] != '\0')
         result[i++] = s1[j++];
     result[i++] = '\0';
     return (result);
