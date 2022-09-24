@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/23 16:34:07 by mbin-nas          #+#    #+#             */
-/*   Updated: 2022/09/25 00:53:47 by marvin           ###   ########.fr       */
+/*   Updated: 2022/09/25 01:23:49 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,7 +103,7 @@ char *find_next_line_and_free(char *buffer)
 		k++;
 		i++;
 	}
-	free (buffer);
+	free(buffer);
 	return (line);
 }
 
@@ -118,8 +118,12 @@ char	*get_next_line(int fd)
 {
 	static char *buffer; 
 	char *line;
-
+	
+	if(fd < 0 || BUFFER_SIZE <= 0 || read(fd, 0, 0) < 0)
+		return (NULL); 
 	buffer = read_line_of_file(fd ,buffer);
+	if(!buffer[fd])
+		return (NULL);
 	line = get_line(buffer);
 	buffer = find_next_line_and_free(buffer);	
 	return (line);
