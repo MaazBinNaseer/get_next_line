@@ -3,28 +3,24 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
+/*   By: mbin-nas <mbin-nas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/23 19:05:29 by mbin-nas          #+#    #+#             */
-/*   Updated: 2022/09/25 00:50:09 by marvin           ###   ########.fr       */
+/*   Created: 2022/09/27 18:46:30 by mbin-nas          #+#    #+#             */
+/*   Updated: 2022/09/27 18:49:57 by mbin-nas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-
-int main(int argc, char **argv)
+int main()
 {
     int fd;
     char *line;
-    (void)argc;
-    fd = open(argv[1], O_RDONLY);
-    line = "";
-    while (line != NULL)
+    fd = open("test.txt" ,O_RDONLY);
+    line = get_next_line(fd);
+    while(line)
     {
-        line = get_next_line(fd);
-        printf("line is being printed\n %s", line);
-    }    
-    fd = close(fd);
+        printf("%s", line);   
+    }
     return (0);
 }
