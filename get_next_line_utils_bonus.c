@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line_utils.c                              :+:      :+:    :+:   */
+/*   get_next_line_utils_bonus.c                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbin-nas <mbin-nas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/27 14:19:55 by mbin-nas          #+#    #+#             */
-/*   Updated: 2022/09/28 15:44:59 by mbin-nas         ###   ########.fr       */
+/*   Created: 2022/09/29 15:11:14 by mbin-nas          #+#    #+#             */
+/*   Updated: 2022/09/29 15:36:02 by mbin-nas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 //A function to read the number of characters in the string
 size_t	ft_strlen(char *string)
